@@ -9,9 +9,9 @@ Cette simulation illustre comment un conflit d'intérêts (le biais) influence l
 * **L'Émetteur (L'Analyste financier) :** Il connaît la valeur réelle de l'action . Son utilité est  $U_E = -(a - (\theta + b))^2$ . Il veut que l'action  soit proche de la réalité augmentée de son biais.
 * **Le Récepteur (L'Investisseur) :** Il ne connaît pas . Son utilité est $U_R = -(a - \theta)^2$ . Il veut que son action  soit la plus proche possible de la valeur réelle.
 
-### Ce que fait le code{-}
+### Ce que fait le code {-}
 
-Le script calcule l'**Équilibre Bayésien Parfait** du jeu en fonction du paramètre de biais que vous choisissez via le curseur :
+Le script utilisé calcule l'**Équilibre Bayésien Parfait** du jeu en fonction du paramètre de biais que vous choisissez via le curseur :
 
 1. **Calcul du nombre de partitions ($N$) :** Il détermine combien de "messages" différents l'expert peut envoyer de manière crédible. Plus le biais est élevé, plus  est petit.
 2. **Détermination des seuils ($a_i$) :** Le code résout l'équation d'indifférence de l'expert. Pour que l'équilibre tienne, l'expert doit être indifférent entre deux messages à la frontière de deux intervalles.

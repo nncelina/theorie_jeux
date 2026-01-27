@@ -1,0 +1,8 @@
+# VI. Limites et nuances du cheap talk {-}
+
+Le modèle de cheap talk, malgré sa puissance analytique, présente plusieurs limites importantes qui doivent être reconnues pour une compréhension nuancée. Premièrement, le modèle suppose que les joueurs sont parfaitement rationnels et que la structure du jeu est connaissance commune. En réalité, les individus peuvent avoir des capacités cognitives limitées, des biais comportementaux, ou des croyances erronées sur la structure du jeu.
+
+Deuxièmement, le modèle ignore les aspects répétés de la communication. Dans des interactions répétées, la réputation peut émerger comme mécanisme de crédibilité : un émetteur qui ment systématiquement perd sa crédibilité future, ce qui peut discipliner son comportement même en l'absence de coûts directs. Cette dimension répétée enrichit considérablement les possibilités de communication crédible.
+Troisièmement, le modèle suppose que les messages sont totalement non vérifiables. En pratique, même si la vérification complète est impossible, il peut exister une probabilité de vérification ex post, ou des mécanismes de réputation informels qui créent des coûts indirects au mensonge. Ces mécanismes peuvent améliorer la crédibilité de la communication au-delà de ce que prédit le modèle de base.
+
+Enfin, le modèle suppose que les préférences sont fixes et connues. En réalité, les préférences peuvent être endogènes, évoluer dans le temps, ou être partiellement privées, ce qui complique l'analyse mais peut aussi créer de nouvelles possibilités pour la communication crédible.

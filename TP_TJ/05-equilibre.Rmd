@@ -1,0 +1,25 @@
+# IV. Analyse des équilibres de *cheap talk*{-}
+
+## 1. L’équilibre de babillage (*babbling equilibrium*){-}
+
+L’équilibre de babillage constitue le point de départ de l’analyse des équilibres de cheap talk. Dans cet équilibre, les messages envoyés par l’émetteur ne contiennent aucune information sur son type. Le récepteur anticipe que l’émetteur a intérêt à déformer l’information et, sachant que les messages sont gratuits et non vérifiables, il choisit rationnellement de les ignorer. Il adopte alors une action indépendante du message reçu, fondée uniquement sur ses croyances a priori concernant l’état du monde.
+
+Dans le modèle continu de Crawford et Sobel (1982), cet équilibre se traduit par le fait que le joueur 2 choisit l’action correspondant à l’espérance de $\theta$, soit $a=\frac{1}{2}$, quel que soit le message observé. L’équilibre de babillage est toujours un équilibre bayésien parfait, quelle que soit l’ampleur du biais entre les préférences des joueurs. Il illustre une situation où la communication existe formellement, mais est totalement inefficace du point de vue informationnel.
+
+## 2. L’équilibre à deux messages{-}
+
+Lorsque les préférences des agents ne sont pas trop divergentes, l’équilibre de babillage n’est plus le seul équilibre possible. Il peut alors exister des équilibres partiellement informatifs, notamment des équilibres à deux messages. Dans ce type d’équilibre, l’émetteur ne révèle pas exactement son type, mais il classe l’information en deux catégories. Les types inférieurs à un certain seuil envoient un premier message, tandis que les types supérieurs envoient un second message.
+
+Dans le modèle de Crawford et Sobel, l’existence d’un tel équilibre repose sur une condition d’indifférence du type marginal. Le seuil est choisi de telle sorte que l’émetteur situé exactement à ce seuil soit indifférent entre les deux messages. L’équilibre à deux messages permet donc une transmission d’information imparfaite mais utile : le récepteur ajuste son action en fonction du message reçu, ce qui améliore sa décision par rapport au cas du babillage. Toutefois, cet équilibre n’existe que si le biais entre les préférences des joueurs est suffisamment faible.
+
+## 3. Les équilibres à N messages{-}
+
+Le raisonnement peut être généralisé à des équilibres à Nmessages. Dans ces équilibres, l’intervalle des types est découpé en plusieurs sous-intervalles, chacun étant associé à un message distinct. Plus le nombre de messages est élevé, plus la communication est précise, car le récepteur peut distinguer plus finement les différents états possibles du monde.
+
+Cependant, le nombre maximal de messages informatifs est limité. À mesure que le nombre de messages augmente, les contraintes d’incitation deviennent plus fortes, car il faut garantir que chaque type préfère envoyer le message qui lui est assigné plutôt que d’imiter un autre type. Ces équilibres n’existent donc que lorsque le biais est très faible. Il en résulte qu’il n’existe jamais d’équilibre totalement révélateur : la communication reste toujours imparfaite dès lors que les préférences divergent, même légèrement.
+
+## 4. Effet du biais sur la précision de l’information{-}
+
+Le biais, qui mesure l’écart entre l’action préférée par l’émetteur et celle préférée par le récepteur pour un même état du monde, joue un rôle central dans la qualité de l’information transmise. Lorsque le biais est faible, les intérêts des agents sont relativement alignés, ce qui rend possible une communication riche, avec plusieurs messages informatifs. À l’inverse, lorsque le biais est élevé, l’émetteur a un fort intérêt à manipuler l’information afin d’influencer la décision du récepteur, ce qui réduit la crédibilité des messages.
+
+Le résultat fondamental mis en évidence par Crawford et Sobel est que **la précision de l’information transmise décroît avec l’ampleur du biais**. Dans les cas extrêmes, toute communication informative disparaît et seul l’équilibre de babillage subsiste. Ce résultat fournit une interprétation économique importante : la communication gratuite peut transmettre de l’information, mais cette information est d’autant plus grossière que les conflits d’intérêts sont importants.

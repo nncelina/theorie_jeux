@@ -1,0 +1,194 @@
+<style>
+
+/* =========================
+   PALETTE ORANGE
+========================= */
+:root {
+  --orange-main: #f97316;
+  --orange-soft: #ffedd5;
+  --orange-muted: #fdba74;
+  --orange-dark: #9a3412;
+  --text-dark: #1f2933;
+  --text-muted: #6b7280;
+}
+
+/* =========================
+   FOND GLOBAL
+========================= */
+.book .book-body,
+.book .book-body .page-wrapper .page-inner {
+  background-color: #fffaf5 !important;
+}
+
+/* On cache le titre auto */
+h1 { display: none; }
+
+/* =========================
+   LOGOS
+========================= */
+.header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 40px auto;
+  max-width: 900px;
+}
+
+.logo-item img {
+  height: 70px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+  transition: transform 0.3s ease;
+}
+
+.logo-item img:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   CARTE PRINCIPALE
+========================= */
+.main-cover-card {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 60px 50px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid #ffedd5;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+/* Badge */
+.badge-pill {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  color: var(--orange-dark);
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid var(--orange-muted);
+}
+
+/* Titre */
+.main-title {
+  display: block !important;
+  font-size: 3.2em !important;
+  font-weight: 900 !important;
+  color: var(--orange-dark) !important;
+  letter-spacing: -1.5px !important;
+  line-height: 1.1 !important;
+  margin-bottom: 15px !important;
+}
+
+/* Sous-titre */
+.sub-title {
+  font-size: 1.15em;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* =========================
+   GRILLE INFOS
+========================= */
+.cover-grid {
+  display: flex;
+  gap: 24px;
+  text-align: left;
+}
+
+.cover-box {
+  flex: 1;
+  background: #fff7ed;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #fed7aa;
+}
+
+/* Kicker */
+.cover-kicker {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--orange-main);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* Noms */
+.cover-names {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.cover-supervisor {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: var(--orange-dark);
+}
+
+.cover-note {
+  font-size: 0.8em;
+  color: #9ca3af;
+  margin-top: 10px;
+  display: block;
+}
+
+/* =========================
+   CONTEXT TAG
+========================= */
+.context-tag {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #fffaf5;
+  border-radius: 12px;
+  border-left: 4px solid var(--orange-main);
+  font-size: 0.8em;
+  color: #7c2d12;
+}
+
+/* Sommaire — fond très clair */
+.book .book-summary {
+    background: #fffdf9 !important;
+    border-right: 1px solid #fed7aa;
+}
+
+/* Tous les liens du TOC — orange foncé par défaut */
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li a:visited {
+    color: #7c2d12 !important;
+    font-weight: 500;
+}
+
+/* Hover */
+.book .book-summary ul.summary li a:hover,
+.book .book-summary ul.summary li a:focus {
+    color: #f97316 !important;
+    background: rgba(249,115,22,0.08);
+}
+
+/* Lien actif / sélectionné (toutes pages) */
+.book .book-summary ul.summary li.active > a,
+.book .book-summary ul.summary li.selected > a,
+.book .book-summary ul.summary li.current > a {
+    color: #f97316 !important;
+    font-weight: 800;
+    background: rgba(249,115,22,0.15) !important;
+    border-left: 4px solid #f97316;
+}
+
+/* Sous-sections actives */
+.book .book-summary ul.summary li.active ul li a,
+.book .book-summary ul.summary li.selected ul li a,
+.book .book-summary ul.summary li.current ul li a {
+    color: #9a3412 !important;
+}
+
+
+
+</style>

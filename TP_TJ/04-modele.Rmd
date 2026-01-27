@@ -1,0 +1,141 @@
+# III. Modèle de Crawford & Sobel  {-}
+
+##	1. Mise en situation{-}
+
+Le modèle de **Crawford et Sobel (1982)** constitue la référence fondatrice de l’analyse du *cheap talk* en théorie des jeux. Il s’inscrit dans l’étude de la **communication stratégique** lorsque les messages sont **gratuits**, **non contraignants** et **non vérifiables**, et que les intérêts des agents impliqués ne sont pas parfaitement alignés.
+
+L’objectif central du modèle est d’analyser **dans quelle mesure une information privée détenue par un émetteur peut être transmise de manière crédible à un récepteur rationnel**, malgré l’incitation potentielle de l’émetteur à manipuler cette information afin d’influencer la décision finale.
+
+Contrairement aux modèles de *signaling* traditionnels, dans lesquels l’information est transmise par des actions **coûteuses** ou observables, Crawford et Sobel montrent que des **messages purement verbaux**, sans coût ni engagement, peuvent néanmoins contenir de l’information lorsque le **conflit d’intérêts entre les agents est limité**. Le modèle met ainsi en évidence que la communication n’est pas nécessairement inutile même lorsqu’elle ne repose sur aucun mécanisme de vérification.
+
+Le cadre analytique repose sur une interaction entre deux agents : un **émetteur informé** (*sender*), qui observe un état du monde inconnu du récepteur, et un **récepteur non informé** (*receiver*), qui prend une décision après avoir observé le message transmis. L’émetteur connaît donc une information privée, tandis que le récepteur doit inférer cette information à partir d’un message qui peut être stratégiquement manipulé.
+
+### a. Intuition générale du modèle{-}
+
+Le modèle repose sur trois éléments fondamentaux.
+Premièrement, il existe une **asymétrie d’information** : l’émetteur observe un état du monde ($\theta$) que le récepteur ne connaît pas. Deuxièmement, la communication est **gratuite et non vérifiable**, ce qui signifie que le message envoyé n’a pas d’effet direct sur les gains et ne peut pas être sanctionné s’il est faux. Cette caractéristique ouvre la possibilité d’un **mensonge stratégique** lorsque les préférences des agents divergent. Enfin, l’interaction est **séquentielle** : l’émetteur observe l’état du monde et envoie un message, puis le récepteur observe ce message, met à jour ses croyances et choisit une action qui détermine les gains des deux joueurs.
+
+La question centrale posée par Crawford et Sobel est donc la suivante : **quelle quantité d’information peut être transmise lorsque l’émetteur et le récepteur ont des objectifs différents ?**
+
+### b. Importance et portée du modèle{-}
+
+L’intérêt majeur du modèle réside dans le fait qu’il montre que, même en l’absence d’engagement ou de mécanisme de vérification, la communication peut être **partiellement informative**. Toutefois, cette information n’est **jamais parfaitement révélée** lorsque les préférences divergent. Plus le désaccord entre les objectifs de l’émetteur et du récepteur est important, plus la communication devient grossière et moins l’information transmise est précise.
+
+Crawford et Sobel mettent notamment en évidence que :
+
+* un équilibre dans lequel **aucune information n’est transmise** (*équilibre de babillage*) existe toujours ;
+* un équilibre de **révélation complète de l’information** n’existe généralement pas lorsque les intérêts ne sont pas alignés ;
+* il peut exister des équilibres intermédiaires dans lesquels seule **une information partielle** est transmise de manière crédible.
+
+Ces résultats font du modèle de Crawford et Sobel un cadre analytique essentiel pour comprendre la communication stratégique dans de nombreux contextes économiques, politiques et organisationnels, et ont servi de base à de nombreuses extensions dans la littérature en théorie des jeux.
+
+
+## 2. Structure et équilibre du modèle{-}
+
+Le modèle de Crawford et Sobel est un jeu dynamique à information incomplète, dans lequel la communication intervient avant la prise de décision finale. Il est formalisé à partir de quatre éléments principaux : les joueurs, l’information, les stratégies et les fonctions d’utilité.
+
+### a. Acteurs et information{-}
+
+Le jeu met en interaction deux joueurs :
+
+* un **émetteur informé** (*sender*), noté \( S \),
+  
+* un **récepteur non informé** (*receiver*), noté \( R \).
+
+Un état du monde \( \theta \), représentant l’information pertinente pour la décision finale, est tiré par la nature selon une distribution de probabilité commune et connue des deux joueurs. Cet état appartient généralement à un intervalle continu, par exemple \( \theta \in [0,1] \). L’émetteur observe parfaitement la réalisation de \( \theta \), tandis que le récepteur n’en a aucune connaissance directe.
+
+### b. Messages et actions{-}
+
+Après avoir observé \( \theta \), l’émetteur envoie un message \( m \) au récepteur. L’ensemble des messages possibles est supposé suffisamment riche et ne fait l’objet d’aucune restriction particulière. Le message est purement verbal : il est gratuit, non vérifiable et n’engage pas l’émetteur.
+
+Après avoir reçu le message \( m \), le récepteur choisit une action \( a \) dans un ensemble d’actions continues. Cette action détermine les gains des deux joueurs.
+
+La stratégie de l’émetteur est donc une fonction qui associe à chaque état du monde un message :
+\[
+m(\theta)
+\]
+
+La stratégie du récepteur est une fonction qui associe à chaque message une action :
+\[
+a(m)
+\]
+
+### c. Fonctions d’utilité et biais de l’émetteur{-}
+
+Les préférences des deux joueurs sont représentées par des fonctions d’utilité quadratiques. Le récepteur souhaite choisir une action aussi proche que possible de l’état réel du monde, tandis que l’émetteur préfère une action biaisée par rapport à cet état.
+
+La fonction d’utilité du récepteur est donnée par :
+\[
+U_R = - (a - \theta)^2
+\]
+
+Le récepteur maximise donc son utilité en choisissant une action égale à l’espérance conditionnelle de \( \theta \), compte tenu du message reçu.
+
+La fonction d’utilité de l’émetteur est donnée par :
+\[
+U_S = - (a - (\theta + b))^2
+\]
+
+Le paramètre \( b \) représente le **biais** de l’émetteur. Il mesure le conflit d’intérêts entre les deux agents. Lorsque \( b = 0 \), les préférences sont parfaitement alignées et l’émetteur souhaite que l’action choisie corresponde exactement à l’état du monde. Lorsque \( b \neq 0 \), l’émetteur cherche à influencer la décision du récepteur dans une direction qui lui est favorable.
+
+### d. Déroulement du jeu{-}
+
+Le jeu se déroule selon la séquence suivante :
+
+1. La nature tire un état du monde \( \theta \).
+
+2. L’émetteur observe \( \theta \).
+
+3. L’émetteur envoie un message \( m \).
+
+4. Le récepteur observe \( m \) et met à jour ses croyances sur \( \theta \).
+
+5. Le récepteur choisit une action \( a \).
+
+Il s’agit donc d’un jeu séquentiel avec information asymétrique.
+
+### e. Notion d’équilibre{-}
+
+L’équilibre pertinent dans ce cadre est un **équilibre bayésien parfait**. Un tel équilibre est défini par :
+
+- une stratégie de message de l’émetteur \( m(\theta) \),
+
+- une stratégie d’action du récepteur \( a(m) \),
+
+- des croyances du récepteur cohérentes avec la stratégie de l’émetteur.
+
+À l’équilibre, le récepteur choisit une action qui maximise son utilité compte tenu de ses croyances, et l’émetteur choisit son message de manière optimale en anticipant la réaction du récepteur.
+
+### f. Types d’équilibres{-}
+
+Le modèle admet toujours un **équilibre de babillage** (*babbling equilibrium*), dans lequel le message envoyé par l’émetteur ne transmet aucune information. Dans ce cas, le récepteur ignore le message et choisit une action constante correspondant à l’espérance non conditionnelle de \( \theta \).
+
+Cependant, Crawford et Sobel montrent également l’existence d’**équilibres partiellement informatifs**. Dans ces équilibres, l’émetteur ne révèle pas exactement l’état du monde, mais regroupe les valeurs possibles de \( \theta \) en intervalles. À chaque intervalle correspond un message distinct. Le récepteur sait alors dans quel intervalle se situe \( \theta \), sans en connaître la valeur exacte, et choisit son action comme l’espérance conditionnelle de \( \theta \) sur cet intervalle.
+
+La précision de l’information transmise dépend directement de l’importance du biais \( b \). Plus le biais est élevé, plus les intervalles sont larges et moins l’information transmise est précise. Lorsque le biais est trop important, seuls les équilibres non informatifs subsistent.
+
+
+## 3. Résultats et limites du modèle{-}
+
+Le modèle de Crawford et Sobel met en évidence plusieurs résultats fondamentaux concernant la communication stratégique dans les jeux à information asymétrique. Ces résultats permettent de mieux comprendre dans quelles conditions la communication peut être informative, malgré l’absence d’engagement et de vérification des messages.
+
+### a. Résultats majeurs du modèle{-}
+
+Un premier résultat important est que la communication de type *cheap talk* n’est pas nécessairement dépourvue de contenu informatif. Bien que les messages envoyés par l’émetteur soient gratuits et non contraignants, ils peuvent transmettre de l’information lorsque le conflit d’intérêts entre l’émetteur et le récepteur est suffisamment limité. Le modèle montre ainsi que la communication verbale peut jouer un rôle informatif même en l’absence de mécanismes incitatifs explicites.
+
+Un second résultat central est l’impossibilité, en général, d’une révélation complète de l’information lorsque les préférences des agents divergent. Dès lors que le biais de l’émetteur est non nul, celui-ci a intérêt à déformer l’information afin d’influencer la décision finale. Par conséquent, un équilibre de révélation totale de l’état du monde n’existe pas, sauf dans le cas particulier où les intérêts des deux agents sont parfaitement alignés.
+
+Le modèle met également en évidence l’existence d’équilibres partiellement informatifs, dans lesquels l’émetteur regroupe les états possibles du monde en un nombre fini d’intervalles. Chaque intervalle correspond à un message distinct, permettant au récepteur d’obtenir une information imparfaite mais utile. Ces équilibres illustrent le fait que l’information transmise est volontairement grossière, mais reste crédible car elle est compatible avec les incitations des deux agents.
+
+Enfin, Crawford et Sobel montrent que la quantité d’information transmise dépend directement de l’ampleur du biais de l’émetteur. Plus le biais est faible, plus le nombre de messages distincts à l’équilibre est élevé, et plus l’information transmise est précise. À l’inverse, lorsque le biais devient trop important, la communication perd tout contenu informatif et seul l’équilibre de babillage subsiste.
+
+### b. Limites du modèle{-}
+
+Malgré son importance théorique, le modèle de Crawford et Sobel repose sur un ensemble d’hypothèses restrictives qui en limitent la portée empirique. Tout d’abord, le modèle considère une interaction entre un seul émetteur et un seul récepteur, ce qui exclut les effets de concurrence, de coordination ou de communication multiple que l’on observe souvent dans les situations réelles.
+
+Ensuite, les messages sont supposés totalement gratuits et non vérifiables. Cette hypothèse exclut la possibilité de coûts de communication, de sanctions ou de mécanismes de réputation, qui peuvent renforcer la crédibilité des messages dans des contextes réels. De plus, le jeu est statique et ne prend pas en compte la répétition des interactions, alors que l’apprentissage et la réputation jouent un rôle crucial dans la communication à long terme.
+
+Par ailleurs, les fonctions d’utilité quadratiques et la structure continue de l’état du monde constituent des simplifications qui facilitent l’analyse mais réduisent la généralité des résultats. Enfin, le modèle admet une multiplicité d’équilibres, ce qui pose un problème de sélection de l’équilibre pertinent d’un point de vue prédictif.
+
+Malgré ces limites, le modèle de Crawford et Sobel demeure une référence incontournable en théorie des jeux. Il fournit un cadre analytique fondamental pour comprendre la communication stratégique et a inspiré de nombreuses extensions intégrant des coûts de communication, des interactions répétées ou des mécanismes de vérification.
+

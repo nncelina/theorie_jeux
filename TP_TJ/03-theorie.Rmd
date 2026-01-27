@@ -1,0 +1,78 @@
+# II. Fondements théoriques {-}
+
+Le jeu de *cheap talk* est modélisé comme un jeu dynamique à information incomplète. Cette section pose le cadre formel nécessaire pour comprendre comment une communication sans coût peut influencer les décisions dans un environnement d'information asymétrique
+
+## 1. Le modèle de base du Cheap Talk {-}
+
+* **Les Joueurs et l'Information**
+Le modèle repose sur l'interaction entre deux joueurs $I = \{1, 2\}$
+
+
+  * **Le Joueur 1 (Emetteur ou Sender) :** Il observe une information privée, son « type » **$\theta$
+**.
+  * **Le Joueur 2 (Récepteur ou Receiver) :** Il ne possède pas d'information privée mais prend l'action finale **$a$**.
+  
+* **Espace des types et distribution**
+
+  * **L'ensemble des types :** Le type **$\theta$** appartient à cet ensemble et représente la connaissance de l'émetteur sur l'état du monde.
+  * **La distribution de probabilité p($\theta$) :** Le type est choisi par la Nature selon une distribution connue des deux joueurs. Cela constitue la croyance *a priori* du récepteur avant la communication.
+  
+* **Structure dynamique du jeu**
+Le jeu se déroule en trois étapes chronologiques :
+1.	**Phase d'information :** La Nature choisit le type **$\theta$**. L'émetteur observe parfaitement ce type.
+2.	**Phase de communication :** l'émetteur, après avoir observé le type, envoie un message **$m$** (appartenant à un ensemble **M**) au récepteur.
+3.	**Phase d'action :** Le récepteur observe le message **$m$** (mais pas la valeur de **$\theta$**) et choisit une action **$a$** (appartenant à un ensemble **A**).
+
+* **Fonctions de gain (Payoffs)**
+
+Les gains des joueurs sont définis par les fonctions d'utilité suivantes :
+
+* **$U_1(a,\theta)$** pour l'émetteur.
+
+* **$U_2(a,\theta)$** pour le récepteur.
+
+**Remarque :** Le message **$m$** n'apparaît pas dans ces fonctions. Le coût de la parole est nul (*cheap*). Les utilités ne dépendent que de la décision finale **$a$** et de la réalité **$\theta$**. L'asymétrie d'information réside dans le fait que le récepteur doit choisir son action sans connaître la valeur exacte de la réalité, en se basant uniquement sur le signal transmis.
+
+## 2. Stratégies et équilibre{-}
+
+Dans un jeu de communication stratégique, la résolution passe par la définition des comportements des joueurs et du concept d'équilibre.
+
+### a. Stratégies des joueurs{-}
+
+Une stratégie est une règle de conduite complète qui indique ce qu'un joueur doit faire dans chaque situation possible.
+
+* La stratégie de l'émetteur ($S$) :
+
+Elle consiste en une fonction, notée $s(\theta)$, qui associe à chaque type $\theta$ (l'information qu'il détient) un message m parmi l'ensemble des messages possibles.
+
+* La stratégie du récepteur ($R$) :
+
+Elle consiste en une fonction, notée $a(m)$, qui associe à chaque message reçu $m$ une action $a$. Le récepteur ne voit pas le type, il doit donc déduire une réaction optimale uniquement à partir du signal reçu.
+
+### b. L'Equilibre Bayésien Parfait (PBE){-}
+
+Le concept de solution retenu est l'Equilibre Bayésien Parfait. Pour qu'il y ait équilibre, trois conditions doivent être réunies simultanément :
+
+1.	**L'optimalité de l'émetteur :** Pour chaque type **$\theta$**, le message choisi doit être celui qui donne le meilleur résultat final pour l'émetteur, en anticipant la réaction du récepteur.
+
+2.	**L'optimalité du récepteur :** Pour chaque message **$m$**, l'action choisie doit être la meilleure réponse possible selon ce que le récepteur croit être la réalité.
+
+3.	**La cohérence des croyances :** Le récepteur doit mettre à jour ses croyances sur la réalité (le type) en utilisant la **Règle de Bayes**. Ses conclusions doivent être logiques par rapport à la stratégie de communication utilisée par l'émetteur.
+
+### c. Les deux types d'échecs de la communication{-}
+
+Le *Cheap Talk* échoue lorsqu'il n'existe aucun moyen de transmettre de l'information crédible. On retombe alors sur un **équilibre de babillage (babbling)**.
+
+* **Échec par préférences identiques :**
+
+Un premier type d’échec apparaît lorsque les préférences des émetteurs sont identiques, indépendamment de leur type. Dans cette situation, tous les types de l’émetteur ont intérêt à envoyer le message le plus avantageux afin d’influencer la décision du récepteur en leur faveur. Il en résulte que, quel que soit le type $\theta$, l’émetteur envoie le même message $m$, ce qui peut être formalisé par la stratégie $s(\theta) = m$ pour tout $\theta$. 
+
+Le récepteur comprend alors que le message reçu ne permet pas de distinguer les différents types possibles de l’émetteur, puisque tous adoptent le même comportement de communication. En conséquence, la croyance a posteriori du récepteur reste identique à sa croyance a priori, ce qui s’écrit $P(\theta| m) = P(\theta)$.
+
+Le message n’apporte ainsi aucune réduction de l’incertitude. Le récepteur ignore l’information transmise et choisit l’action qui maximise son utilité indépendamment du message. La communication devient alors un simple bruit non informatif.
+
+* **Échec par préférences opposées :**
+
+Un second type d’échec survient lorsque les préférences de l’émetteur et du récepteur sont strictement opposées, comme dans les jeux à somme nulle. Dans ce cas, les fonctions de gain vérifient la relation $u_1(a,\theta) = −u_2(a,\theta)$, ce qui signifie que le gain de l’un correspond exactement à la perte de l’autre. 
+
+L’émetteur a alors une incitation permanente à tromper le récepteur, car toute information révélée permettrait à ce dernier de choisir une action optimale contre lui. Le récepteur anticipe cette incitation stratégique au mensonge et comprend qu’aucun message ne peut être crédible, même si l’émetteur tentait d’être honnête. Il traite donc tout message comme un signal vide, ne modifie pas ses croyances, de sorte que $P(\theta| m) = P(\theta)$, et choisit l’action qui maximise son utilité indépendamment du message reçu. Dans ce contexte, la parole est totalement décrédibilisée et toute tentative de communication stratégique échoue.

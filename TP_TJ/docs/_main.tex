@@ -1,0 +1,572 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Cheap talk},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Cheap talk}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{}\label{section}
+\addcontentsline{toc}{chapter}{}
+
+Agence Nationale de la Statistique et de la Démographie (ANSD)
+
+École Nationale de la Statistique et de l'Analyse Économique (ENSAE)
+
+PRÉSENTATION DU PROJET -- ANNÉE ACADÉMIQUE 2025-2026
+
+Cheap talk
+
+Théorie des jeux
+
+Rédigé par
+
+Célina NGUEMFOUO NGOUMTSA
+G. Judicaël Oscar KAFANDO
+Jean-Luc BATABATI
+Jeanne De La Flèche AMANA ONANENA
+Yves DJERAKEI
+
+Élèves Ingénieurs Statisticiens Economistes (ISE 2)
+
+Sous la supervision de
+
+M. Idrissa DIAGNE
+
+Ingénieur Statisticien Economiste
+
+Document généré via R Bookdown.
+
+\chapter*{Introduction}\label{introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\textbf{Introduction}
+
+Dans de nombreuses situations économiques, la transmission de l'information ne repose pas sur des actions coûteuses ou sur des mécanismes contractuels formels, mais sur de simples messages verbaux. Les agents annoncent des intentions, donnent des conseils ou formulent des recommandations sans que ces paroles n'aient d'effet direct sur leurs gains ni qu'elles soient juridiquement contraignantes. Pourtant, ces messages influencent souvent les décisions des autres agents. Cette observation soulève une question centrale en théorie des jeux et en économie de l'information : \textbf{peut-on transmettre de l'information de manière crédible uniquement à travers des messages gratuits ?}
+
+L'étude du \textbf{cheap talk} vise précisément à répondre à cette question. Elle permet de comprendre dans quelles conditions une communication non coûteuse peut être informative, et dans quelles situations elle devient totalement inefficace. Le cheap talk est ainsi particulièrement pertinent pour analyser des phénomènes tels que la communication politique, les annonces d'entreprises, les recommandations d'experts ou encore les interactions entre conseillers et décideurs. Dans tous ces cas, les paroles échangées ne sont ni vérifiables ni contraignantes, mais elles jouent un rôle déterminant dans la prise de décision.
+
+\chapter*{I. Généralités}\label{i.-guxe9nuxe9ralituxe9s}
+\addcontentsline{toc}{chapter}{I. Généralités}
+
+Le cheap talk désigne une forme de communication stratégique caractérisée par trois propriétés fondamentales. Premièrement, la communication est \textbf{gratuite}, c'est-à-dire que l'envoi d'un message n'entraîne aucun coût pour l'émetteur, quel que soit son contenu. Dire la vérité ou mentir est donc strictement équivalent du point de vue des gains directs. Deuxièmement, la communication est \textbf{non contraignante} : l'émetteur n'est pas engagé par son message et peut adopter ultérieurement une action incompatible avec ce qu'il a annoncé. Enfin, la communication est \textbf{non vérifiable}, ce qui signifie que le récepteur ne peut pas observer directement l'état réel du monde ni vérifier ex post la véracité du message reçu.
+
+Ces caractéristiques rendent la communication a priori peu crédible. En l'absence de coût, de sanction ou de mécanisme de vérification, l'émetteur peut être tenté de manipuler l'information afin d'influencer la décision du récepteur à son avantage. Toute la difficulté de l'analyse du cheap talk consiste donc à déterminer si, malgré ces limites, la communication peut transmettre de l'information à l'équilibre, et si oui, sous quelles conditions.
+
+Il est essentiel de distinguer le cheap talk des modèles de signaling, qui constituent un autre pilier de l'économie de l'information. Dans les modèles de signaling, le joueur informé transmet de l'information à travers une action coûteuse, comme l'éducation sur le marché du travail ou un investissement financier. Le coût du signal joue un rôle disciplinaire : seuls certains types d'agents ont intérêt ou sont capables de supporter ce coût, ce qui rend l'information crédible. La crédibilité du message repose donc sur une différence de coûts entre les types.
+À l'inverse, dans le cheap talk, le message n'a aucun effet direct sur les gains. Il ne constitue pas une preuve et ne permet pas de distinguer les types par un mécanisme de sélection basé sur le coût. Toute crédibilité éventuelle doit donc provenir exclusivement de la structure des préférences et des incitations stratégiques. Autrement dit, dans le cheap talk, l'information peut être transmise non pas parce qu'elle est coûteuse, mais parce que, dans certaines situations, dire la vérité est compatible avec l'intérêt de l'émetteur compte tenu de la réaction anticipée du récepteur.
+
+\chapter*{II. Fondements théoriques}\label{ii.-fondements-thuxe9oriques}
+\addcontentsline{toc}{chapter}{II. Fondements théoriques}
+
+Le jeu de \emph{cheap talk} est modélisé comme un jeu dynamique à information incomplète. Cette section pose le cadre formel nécessaire pour comprendre comment une communication sans coût peut influencer les décisions dans un environnement d'information asymétrique
+
+\section*{1. Le modèle de base du Cheap Talk}\label{le-moduxe8le-de-base-du-cheap-talk}
+\addcontentsline{toc}{section}{1. Le modèle de base du Cheap Talk}
+
+\begin{itemize}
+\item
+  \textbf{Les Joueurs et l'Information}
+  Le modèle repose sur l'interaction entre deux joueurs \(I = \{1, 2\}\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Le Joueur 1 (Emetteur ou Sender) :} Il observe une information privée, son « type » \textbf{\(\theta\)
+    }.
+  \item
+    \textbf{Le Joueur 2 (Récepteur ou Receiver) :} Il ne possède pas d'information privée mais prend l'action finale \textbf{\(a\)}.
+  \end{itemize}
+\item
+  \textbf{Espace des types et distribution}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{L'ensemble des types :} Le type \textbf{\(\theta\)} appartient à cet ensemble et représente la connaissance de l'émetteur sur l'état du monde.
+  \item
+    \textbf{La distribution de probabilité p(\(\theta\)) :} Le type est choisi par la Nature selon une distribution connue des deux joueurs. Cela constitue la croyance \emph{a priori} du récepteur avant la communication.
+  \end{itemize}
+\item
+  \textbf{Structure dynamique du jeu}
+  Le jeu se déroule en trois étapes chronologiques :
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Phase d'information :} La Nature choisit le type \textbf{\(\theta\)}. L'émetteur observe parfaitement ce type.
+\item
+  \textbf{Phase de communication :} l'émetteur, après avoir observé le type, envoie un message \textbf{\(m\)} (appartenant à un ensemble \textbf{M}) au récepteur.
+\item
+  \textbf{Phase d'action :} Le récepteur observe le message \textbf{\(m\)} (mais pas la valeur de \textbf{\(\theta\)}) et choisit une action \textbf{\(a\)} (appartenant à un ensemble \textbf{A}).
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Fonctions de gain (Payoffs)}
+\end{itemize}
+
+Les gains des joueurs sont définis par les fonctions d'utilité suivantes :
+
+\begin{itemize}
+\item
+  \textbf{\(U_1(a,\theta)\)} pour l'émetteur.
+\item
+  \textbf{\(U_2(a,\theta)\)} pour le récepteur.
+\end{itemize}
+
+\textbf{Remarque :} Le message \textbf{\(m\)} n'apparaît pas dans ces fonctions. Le coût de la parole est nul (\emph{cheap}). Les utilités ne dépendent que de la décision finale \textbf{\(a\)} et de la réalité \textbf{\(\theta\)}. L'asymétrie d'information réside dans le fait que le récepteur doit choisir son action sans connaître la valeur exacte de la réalité, en se basant uniquement sur le signal transmis.
+
+\section*{2. Stratégies et équilibre}\label{stratuxe9gies-et-uxe9quilibre}
+\addcontentsline{toc}{section}{2. Stratégies et équilibre}
+
+Dans un jeu de communication stratégique, la résolution passe par la définition des comportements des joueurs et du concept d'équilibre.
+
+\subsection*{a. Stratégies des joueurs}\label{a.-stratuxe9gies-des-joueurs}
+\addcontentsline{toc}{subsection}{a. Stratégies des joueurs}
+
+Une stratégie est une règle de conduite complète qui indique ce qu'un joueur doit faire dans chaque situation possible.
+
+\begin{itemize}
+\tightlist
+\item
+  La stratégie de l'émetteur (\(S\)) :
+\end{itemize}
+
+Elle consiste en une fonction, notée \(s(\theta)\), qui associe à chaque type \(\theta\) (l'information qu'il détient) un message m parmi l'ensemble des messages possibles.
+
+\begin{itemize}
+\tightlist
+\item
+  La stratégie du récepteur (\(R\)) :
+\end{itemize}
+
+Elle consiste en une fonction, notée \(a(m)\), qui associe à chaque message reçu \(m\) une action \(a\). Le récepteur ne voit pas le type, il doit donc déduire une réaction optimale uniquement à partir du signal reçu.
+
+\subsection*{b. L'Equilibre Bayésien Parfait (PBE)}\label{b.-lequilibre-bayuxe9sien-parfait-pbe}
+\addcontentsline{toc}{subsection}{b. L'Equilibre Bayésien Parfait (PBE)}
+
+Le concept de solution retenu est l'Equilibre Bayésien Parfait. Pour qu'il y ait équilibre, trois conditions doivent être réunies simultanément :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{L'optimalité de l'émetteur :} Pour chaque type \textbf{\(\theta\)}, le message choisi doit être celui qui donne le meilleur résultat final pour l'émetteur, en anticipant la réaction du récepteur.
+\item
+  \textbf{L'optimalité du récepteur :} Pour chaque message \textbf{\(m\)}, l'action choisie doit être la meilleure réponse possible selon ce que le récepteur croit être la réalité.
+\item
+  \textbf{La cohérence des croyances :} Le récepteur doit mettre à jour ses croyances sur la réalité (le type) en utilisant la \textbf{Règle de Bayes}. Ses conclusions doivent être logiques par rapport à la stratégie de communication utilisée par l'émetteur.
+\end{enumerate}
+
+\subsection*{c.~Les deux types d'échecs de la communication}\label{c.-les-deux-types-duxe9checs-de-la-communication}
+\addcontentsline{toc}{subsection}{c.~Les deux types d'échecs de la communication}
+
+Le \emph{Cheap Talk} échoue lorsqu'il n'existe aucun moyen de transmettre de l'information crédible. On retombe alors sur un \textbf{équilibre de babillage (babbling)}.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Échec par préférences identiques :}
+\end{itemize}
+
+Un premier type d'échec apparaît lorsque les préférences des émetteurs sont identiques, indépendamment de leur type. Dans cette situation, tous les types de l'émetteur ont intérêt à envoyer le message le plus avantageux afin d'influencer la décision du récepteur en leur faveur. Il en résulte que, quel que soit le type \(\theta\), l'émetteur envoie le même message \(m\), ce qui peut être formalisé par la stratégie \(s(\theta) = m\) pour tout \(\theta\).
+
+Le récepteur comprend alors que le message reçu ne permet pas de distinguer les différents types possibles de l'émetteur, puisque tous adoptent le même comportement de communication. En conséquence, la croyance a posteriori du récepteur reste identique à sa croyance a priori, ce qui s'écrit \(P(\theta| m) = P(\theta)\).
+
+Le message n'apporte ainsi aucune réduction de l'incertitude. Le récepteur ignore l'information transmise et choisit l'action qui maximise son utilité indépendamment du message. La communication devient alors un simple bruit non informatif.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Échec par préférences opposées :}
+\end{itemize}
+
+Un second type d'échec survient lorsque les préférences de l'émetteur et du récepteur sont strictement opposées, comme dans les jeux à somme nulle. Dans ce cas, les fonctions de gain vérifient la relation \(u_1(a,\theta) = −u_2(a,\theta)\), ce qui signifie que le gain de l'un correspond exactement à la perte de l'autre.
+
+L'émetteur a alors une incitation permanente à tromper le récepteur, car toute information révélée permettrait à ce dernier de choisir une action optimale contre lui. Le récepteur anticipe cette incitation stratégique au mensonge et comprend qu'aucun message ne peut être crédible, même si l'émetteur tentait d'être honnête. Il traite donc tout message comme un signal vide, ne modifie pas ses croyances, de sorte que \(P(\theta| m) = P(\theta)\), et choisit l'action qui maximise son utilité indépendamment du message reçu. Dans ce contexte, la parole est totalement décrédibilisée et toute tentative de communication stratégique échoue.
+
+\chapter*{III. Modèle de Crawford \& Sobel}\label{iii.-moduxe8le-de-crawford-sobel}
+\addcontentsline{toc}{chapter}{III. Modèle de Crawford \& Sobel}
+
+\section*{1. Mise en situation}\label{mise-en-situation}
+\addcontentsline{toc}{section}{1. Mise en situation}
+
+Le modèle de \textbf{Crawford et Sobel (1982)} constitue la référence fondatrice de l'analyse du \emph{cheap talk} en théorie des jeux. Il s'inscrit dans l'étude de la \textbf{communication stratégique} lorsque les messages sont \textbf{gratuits}, \textbf{non contraignants} et \textbf{non vérifiables}, et que les intérêts des agents impliqués ne sont pas parfaitement alignés.
+
+L'objectif central du modèle est d'analyser \textbf{dans quelle mesure une information privée détenue par un émetteur peut être transmise de manière crédible à un récepteur rationnel}, malgré l'incitation potentielle de l'émetteur à manipuler cette information afin d'influencer la décision finale.
+
+Contrairement aux modèles de \emph{signaling} traditionnels, dans lesquels l'information est transmise par des actions \textbf{coûteuses} ou observables, Crawford et Sobel montrent que des \textbf{messages purement verbaux}, sans coût ni engagement, peuvent néanmoins contenir de l'information lorsque le \textbf{conflit d'intérêts entre les agents est limité}. Le modèle met ainsi en évidence que la communication n'est pas nécessairement inutile même lorsqu'elle ne repose sur aucun mécanisme de vérification.
+
+Le cadre analytique repose sur une interaction entre deux agents : un \textbf{émetteur informé} (\emph{sender}), qui observe un état du monde inconnu du récepteur, et un \textbf{récepteur non informé} (\emph{receiver}), qui prend une décision après avoir observé le message transmis. L'émetteur connaît donc une information privée, tandis que le récepteur doit inférer cette information à partir d'un message qui peut être stratégiquement manipulé.
+
+\subsection*{a. Intuition générale du modèle}\label{a.-intuition-guxe9nuxe9rale-du-moduxe8le}
+\addcontentsline{toc}{subsection}{a. Intuition générale du modèle}
+
+Le modèle repose sur trois éléments fondamentaux.
+Premièrement, il existe une \textbf{asymétrie d'information} : l'émetteur observe un état du monde (\(\theta\)) que le récepteur ne connaît pas. Deuxièmement, la communication est \textbf{gratuite et non vérifiable}, ce qui signifie que le message envoyé n'a pas d'effet direct sur les gains et ne peut pas être sanctionné s'il est faux. Cette caractéristique ouvre la possibilité d'un \textbf{mensonge stratégique} lorsque les préférences des agents divergent. Enfin, l'interaction est \textbf{séquentielle} : l'émetteur observe l'état du monde et envoie un message, puis le récepteur observe ce message, met à jour ses croyances et choisit une action qui détermine les gains des deux joueurs.
+
+La question centrale posée par Crawford et Sobel est donc la suivante : \textbf{quelle quantité d'information peut être transmise lorsque l'émetteur et le récepteur ont des objectifs différents ?}
+
+\subsection*{b. Importance et portée du modèle}\label{b.-importance-et-portuxe9e-du-moduxe8le}
+\addcontentsline{toc}{subsection}{b. Importance et portée du modèle}
+
+L'intérêt majeur du modèle réside dans le fait qu'il montre que, même en l'absence d'engagement ou de mécanisme de vérification, la communication peut être \textbf{partiellement informative}. Toutefois, cette information n'est \textbf{jamais parfaitement révélée} lorsque les préférences divergent. Plus le désaccord entre les objectifs de l'émetteur et du récepteur est important, plus la communication devient grossière et moins l'information transmise est précise.
+
+Crawford et Sobel mettent notamment en évidence que :
+
+\begin{itemize}
+\tightlist
+\item
+  un équilibre dans lequel \textbf{aucune information n'est transmise} (\emph{équilibre de babillage}) existe toujours ;
+\item
+  un équilibre de \textbf{révélation complète de l'information} n'existe généralement pas lorsque les intérêts ne sont pas alignés ;
+\item
+  il peut exister des équilibres intermédiaires dans lesquels seule \textbf{une information partielle} est transmise de manière crédible.
+\end{itemize}
+
+Ces résultats font du modèle de Crawford et Sobel un cadre analytique essentiel pour comprendre la communication stratégique dans de nombreux contextes économiques, politiques et organisationnels, et ont servi de base à de nombreuses extensions dans la littérature en théorie des jeux.
+
+\section*{2. Structure et équilibre du modèle}\label{structure-et-uxe9quilibre-du-moduxe8le}
+\addcontentsline{toc}{section}{2. Structure et équilibre du modèle}
+
+Le modèle de Crawford et Sobel est un jeu dynamique à information incomplète, dans lequel la communication intervient avant la prise de décision finale. Il est formalisé à partir de quatre éléments principaux : les joueurs, l'information, les stratégies et les fonctions d'utilité.
+
+\subsection*{a. Acteurs et information}\label{a.-acteurs-et-information}
+\addcontentsline{toc}{subsection}{a. Acteurs et information}
+
+Le jeu met en interaction deux joueurs :
+
+\begin{itemize}
+\item
+  un \textbf{émetteur informé} (\emph{sender}), noté \(S\),
+\item
+  un \textbf{récepteur non informé} (\emph{receiver}), noté \(R\).
+\end{itemize}
+
+Un état du monde \(\theta\), représentant l'information pertinente pour la décision finale, est tiré par la nature selon une distribution de probabilité commune et connue des deux joueurs. Cet état appartient généralement à un intervalle continu, par exemple \(\theta \in [0,1]\). L'émetteur observe parfaitement la réalisation de \(\theta\), tandis que le récepteur n'en a aucune connaissance directe.
+
+\subsection*{b. Messages et actions}\label{b.-messages-et-actions}
+\addcontentsline{toc}{subsection}{b. Messages et actions}
+
+Après avoir observé \(\theta\), l'émetteur envoie un message \(m\) au récepteur. L'ensemble des messages possibles est supposé suffisamment riche et ne fait l'objet d'aucune restriction particulière. Le message est purement verbal : il est gratuit, non vérifiable et n'engage pas l'émetteur.
+
+Après avoir reçu le message \(m\), le récepteur choisit une action \(a\) dans un ensemble d'actions continues. Cette action détermine les gains des deux joueurs.
+
+La stratégie de l'émetteur est donc une fonction qui associe à chaque état du monde un message :
+\[
+m(\theta)
+\]
+
+La stratégie du récepteur est une fonction qui associe à chaque message une action :
+\[
+a(m)
+\]
+
+\subsection*{c.~Fonctions d'utilité et biais de l'émetteur}\label{c.-fonctions-dutilituxe9-et-biais-de-luxe9metteur}
+\addcontentsline{toc}{subsection}{c.~Fonctions d'utilité et biais de l'émetteur}
+
+Les préférences des deux joueurs sont représentées par des fonctions d'utilité quadratiques. Le récepteur souhaite choisir une action aussi proche que possible de l'état réel du monde, tandis que l'émetteur préfère une action biaisée par rapport à cet état.
+
+La fonction d'utilité du récepteur est donnée par :
+\[
+U_R = - (a - \theta)^2
+\]
+
+Le récepteur maximise donc son utilité en choisissant une action égale à l'espérance conditionnelle de \(\theta\), compte tenu du message reçu.
+
+La fonction d'utilité de l'émetteur est donnée par :
+\[
+U_S = - (a - (\theta + b))^2
+\]
+
+Le paramètre \(b\) représente le \textbf{biais} de l'émetteur. Il mesure le conflit d'intérêts entre les deux agents. Lorsque \(b = 0\), les préférences sont parfaitement alignées et l'émetteur souhaite que l'action choisie corresponde exactement à l'état du monde. Lorsque \(b \neq 0\), l'émetteur cherche à influencer la décision du récepteur dans une direction qui lui est favorable.
+
+\subsection*{d.~Déroulement du jeu}\label{d.-duxe9roulement-du-jeu}
+\addcontentsline{toc}{subsection}{d.~Déroulement du jeu}
+
+Le jeu se déroule selon la séquence suivante :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  La nature tire un état du monde \(\theta\).
+\item
+  L'émetteur observe \(\theta\).
+\item
+  L'émetteur envoie un message \(m\).
+\item
+  Le récepteur observe \(m\) et met à jour ses croyances sur \(\theta\).
+\item
+  Le récepteur choisit une action \(a\).
+\end{enumerate}
+
+Il s'agit donc d'un jeu séquentiel avec information asymétrique.
+
+\subsection*{e. Notion d'équilibre}\label{e.-notion-duxe9quilibre}
+\addcontentsline{toc}{subsection}{e. Notion d'équilibre}
+
+L'équilibre pertinent dans ce cadre est un \textbf{équilibre bayésien parfait}. Un tel équilibre est défini par :
+
+\begin{itemize}
+\item
+  une stratégie de message de l'émetteur \(m(\theta)\),
+\item
+  une stratégie d'action du récepteur \(a(m)\),
+\item
+  des croyances du récepteur cohérentes avec la stratégie de l'émetteur.
+\end{itemize}
+
+À l'équilibre, le récepteur choisit une action qui maximise son utilité compte tenu de ses croyances, et l'émetteur choisit son message de manière optimale en anticipant la réaction du récepteur.
+
+\subsection*{f.~Types d'équilibres}\label{f.-types-duxe9quilibres}
+\addcontentsline{toc}{subsection}{f.~Types d'équilibres}
+
+Le modèle admet toujours un \textbf{équilibre de babillage} (\emph{babbling equilibrium}), dans lequel le message envoyé par l'émetteur ne transmet aucune information. Dans ce cas, le récepteur ignore le message et choisit une action constante correspondant à l'espérance non conditionnelle de \(\theta\).
+
+Cependant, Crawford et Sobel montrent également l'existence d'\textbf{équilibres partiellement informatifs}. Dans ces équilibres, l'émetteur ne révèle pas exactement l'état du monde, mais regroupe les valeurs possibles de \(\theta\) en intervalles. À chaque intervalle correspond un message distinct. Le récepteur sait alors dans quel intervalle se situe \(\theta\), sans en connaître la valeur exacte, et choisit son action comme l'espérance conditionnelle de \(\theta\) sur cet intervalle.
+
+La précision de l'information transmise dépend directement de l'importance du biais \(b\). Plus le biais est élevé, plus les intervalles sont larges et moins l'information transmise est précise. Lorsque le biais est trop important, seuls les équilibres non informatifs subsistent.
+
+\section*{3. Résultats et limites du modèle}\label{ruxe9sultats-et-limites-du-moduxe8le}
+\addcontentsline{toc}{section}{3. Résultats et limites du modèle}
+
+Le modèle de Crawford et Sobel met en évidence plusieurs résultats fondamentaux concernant la communication stratégique dans les jeux à information asymétrique. Ces résultats permettent de mieux comprendre dans quelles conditions la communication peut être informative, malgré l'absence d'engagement et de vérification des messages.
+
+\subsection*{a. Résultats majeurs du modèle}\label{a.-ruxe9sultats-majeurs-du-moduxe8le}
+\addcontentsline{toc}{subsection}{a. Résultats majeurs du modèle}
+
+Un premier résultat important est que la communication de type \emph{cheap talk} n'est pas nécessairement dépourvue de contenu informatif. Bien que les messages envoyés par l'émetteur soient gratuits et non contraignants, ils peuvent transmettre de l'information lorsque le conflit d'intérêts entre l'émetteur et le récepteur est suffisamment limité. Le modèle montre ainsi que la communication verbale peut jouer un rôle informatif même en l'absence de mécanismes incitatifs explicites.
+
+Un second résultat central est l'impossibilité, en général, d'une révélation complète de l'information lorsque les préférences des agents divergent. Dès lors que le biais de l'émetteur est non nul, celui-ci a intérêt à déformer l'information afin d'influencer la décision finale. Par conséquent, un équilibre de révélation totale de l'état du monde n'existe pas, sauf dans le cas particulier où les intérêts des deux agents sont parfaitement alignés.
+
+Le modèle met également en évidence l'existence d'équilibres partiellement informatifs, dans lesquels l'émetteur regroupe les états possibles du monde en un nombre fini d'intervalles. Chaque intervalle correspond à un message distinct, permettant au récepteur d'obtenir une information imparfaite mais utile. Ces équilibres illustrent le fait que l'information transmise est volontairement grossière, mais reste crédible car elle est compatible avec les incitations des deux agents.
+
+Enfin, Crawford et Sobel montrent que la quantité d'information transmise dépend directement de l'ampleur du biais de l'émetteur. Plus le biais est faible, plus le nombre de messages distincts à l'équilibre est élevé, et plus l'information transmise est précise. À l'inverse, lorsque le biais devient trop important, la communication perd tout contenu informatif et seul l'équilibre de babillage subsiste.
+
+\subsection*{b. Limites du modèle}\label{b.-limites-du-moduxe8le}
+\addcontentsline{toc}{subsection}{b. Limites du modèle}
+
+Malgré son importance théorique, le modèle de Crawford et Sobel repose sur un ensemble d'hypothèses restrictives qui en limitent la portée empirique. Tout d'abord, le modèle considère une interaction entre un seul émetteur et un seul récepteur, ce qui exclut les effets de concurrence, de coordination ou de communication multiple que l'on observe souvent dans les situations réelles.
+
+Ensuite, les messages sont supposés totalement gratuits et non vérifiables. Cette hypothèse exclut la possibilité de coûts de communication, de sanctions ou de mécanismes de réputation, qui peuvent renforcer la crédibilité des messages dans des contextes réels. De plus, le jeu est statique et ne prend pas en compte la répétition des interactions, alors que l'apprentissage et la réputation jouent un rôle crucial dans la communication à long terme.
+
+Par ailleurs, les fonctions d'utilité quadratiques et la structure continue de l'état du monde constituent des simplifications qui facilitent l'analyse mais réduisent la généralité des résultats. Enfin, le modèle admet une multiplicité d'équilibres, ce qui pose un problème de sélection de l'équilibre pertinent d'un point de vue prédictif.
+
+Malgré ces limites, le modèle de Crawford et Sobel demeure une référence incontournable en théorie des jeux. Il fournit un cadre analytique fondamental pour comprendre la communication stratégique et a inspiré de nombreuses extensions intégrant des coûts de communication, des interactions répétées ou des mécanismes de vérification.
+
+\chapter*{\texorpdfstring{IV. Analyse des équilibres de \emph{cheap talk}}{IV. Analyse des équilibres de cheap talk}}\label{iv.-analyse-des-uxe9quilibres-de-cheap-talk}
+\addcontentsline{toc}{chapter}{IV. Analyse des équilibres de \emph{cheap talk}}
+
+\section*{\texorpdfstring{1. L'équilibre de babillage (\emph{babbling equilibrium})}{1. L'équilibre de babillage (babbling equilibrium)}}\label{luxe9quilibre-de-babillage-babbling-equilibrium}
+\addcontentsline{toc}{section}{1. L'équilibre de babillage (\emph{babbling equilibrium})}
+
+L'équilibre de babillage constitue le point de départ de l'analyse des équilibres de cheap talk. Dans cet équilibre, les messages envoyés par l'émetteur ne contiennent aucune information sur son type. Le récepteur anticipe que l'émetteur a intérêt à déformer l'information et, sachant que les messages sont gratuits et non vérifiables, il choisit rationnellement de les ignorer. Il adopte alors une action indépendante du message reçu, fondée uniquement sur ses croyances a priori concernant l'état du monde.
+
+Dans le modèle continu de Crawford et Sobel (1982), cet équilibre se traduit par le fait que le joueur 2 choisit l'action correspondant à l'espérance de \(\theta\), soit \(a=\frac{1}{2}\), quel que soit le message observé. L'équilibre de babillage est toujours un équilibre bayésien parfait, quelle que soit l'ampleur du biais entre les préférences des joueurs. Il illustre une situation où la communication existe formellement, mais est totalement inefficace du point de vue informationnel.
+
+\section*{2. L'équilibre à deux messages}\label{luxe9quilibre-uxe0-deux-messages}
+\addcontentsline{toc}{section}{2. L'équilibre à deux messages}
+
+Lorsque les préférences des agents ne sont pas trop divergentes, l'équilibre de babillage n'est plus le seul équilibre possible. Il peut alors exister des équilibres partiellement informatifs, notamment des équilibres à deux messages. Dans ce type d'équilibre, l'émetteur ne révèle pas exactement son type, mais il classe l'information en deux catégories. Les types inférieurs à un certain seuil envoient un premier message, tandis que les types supérieurs envoient un second message.
+
+Dans le modèle de Crawford et Sobel, l'existence d'un tel équilibre repose sur une condition d'indifférence du type marginal. Le seuil est choisi de telle sorte que l'émetteur situé exactement à ce seuil soit indifférent entre les deux messages. L'équilibre à deux messages permet donc une transmission d'information imparfaite mais utile : le récepteur ajuste son action en fonction du message reçu, ce qui améliore sa décision par rapport au cas du babillage. Toutefois, cet équilibre n'existe que si le biais entre les préférences des joueurs est suffisamment faible.
+
+\section*{3. Les équilibres à N messages}\label{les-uxe9quilibres-uxe0-n-messages}
+\addcontentsline{toc}{section}{3. Les équilibres à N messages}
+
+Le raisonnement peut être généralisé à des équilibres à Nmessages. Dans ces équilibres, l'intervalle des types est découpé en plusieurs sous-intervalles, chacun étant associé à un message distinct. Plus le nombre de messages est élevé, plus la communication est précise, car le récepteur peut distinguer plus finement les différents états possibles du monde.
+
+Cependant, le nombre maximal de messages informatifs est limité. À mesure que le nombre de messages augmente, les contraintes d'incitation deviennent plus fortes, car il faut garantir que chaque type préfère envoyer le message qui lui est assigné plutôt que d'imiter un autre type. Ces équilibres n'existent donc que lorsque le biais est très faible. Il en résulte qu'il n'existe jamais d'équilibre totalement révélateur : la communication reste toujours imparfaite dès lors que les préférences divergent, même légèrement.
+
+\section*{4. Effet du biais sur la précision de l'information}\label{effet-du-biais-sur-la-pruxe9cision-de-linformation}
+\addcontentsline{toc}{section}{4. Effet du biais sur la précision de l'information}
+
+Le biais, qui mesure l'écart entre l'action préférée par l'émetteur et celle préférée par le récepteur pour un même état du monde, joue un rôle central dans la qualité de l'information transmise. Lorsque le biais est faible, les intérêts des agents sont relativement alignés, ce qui rend possible une communication riche, avec plusieurs messages informatifs. À l'inverse, lorsque le biais est élevé, l'émetteur a un fort intérêt à manipuler l'information afin d'influencer la décision du récepteur, ce qui réduit la crédibilité des messages.
+
+Le résultat fondamental mis en évidence par Crawford et Sobel est que \textbf{la précision de l'information transmise décroît avec l'ampleur du biais}. Dans les cas extrêmes, toute communication informative disparaît et seul l'équilibre de babillage subsiste. Ce résultat fournit une interprétation économique importante : la communication gratuite peut transmettre de l'information, mais cette information est d'autant plus grossière que les conflits d'intérêts sont importants.
+
+\chapter*{V. Applications}\label{v.-applications}
+\addcontentsline{toc}{chapter}{V. Applications}
+
+\subsection*{Simulation du Modèle de Cheap Talk}\label{simulation-du-moduxe8le-de-cheap-talk}
+\addcontentsline{toc}{subsection}{Simulation du Modèle de Cheap Talk}
+
+Cette simulation illustre comment un conflit d'intérêts (le biais) influence la transmission d'information entre un \textbf{Expert} et un \textbf{Décideur}.
+
+\subsection*{Les Joueurs et leurs Objectifs}\label{les-joueurs-et-leurs-objectifs}
+\addcontentsline{toc}{subsection}{Les Joueurs et leurs Objectifs}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{L'Émetteur (L'Analyste financier) :} Il connaît la valeur réelle de l'action . Son utilité est \(U_E = -(a - (\theta + b))^2\) . Il veut que l'action soit proche de la réalité augmentée de son biais.
+\item
+  \textbf{Le Récepteur (L'Investisseur) :} Il ne connaît pas . Son utilité est \(U_R = -(a - \theta)^2\) . Il veut que son action soit la plus proche possible de la valeur réelle.
+\end{itemize}
+
+\subsection*{Ce que fait le code}\label{ce-que-fait-le-code}
+\addcontentsline{toc}{subsection}{Ce que fait le code}
+
+Le script calcule l'\textbf{Équilibre Bayésien Parfait} du jeu en fonction du paramètre de biais que vous choisissez via le curseur :
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Calcul du nombre de partitions (\(N\)) :} Il détermine combien de ``messages'' différents l'expert peut envoyer de manière crédible. Plus le biais est élevé, plus est petit.
+\item
+  \textbf{Détermination des seuils (\(a_i\)) :} Le code résout l'équation d'indifférence de l'expert. Pour que l'équilibre tienne, l'expert doit être indifférent entre deux messages à la frontière de deux intervalles.
+\item
+  \textbf{Calcul des actions (\(a\)) :} Pour chaque intervalle, l'investisseur choisit l'action optimale (la moyenne de l'intervalle).
+\end{enumerate}
+
+\subsection*{Les Fonctions Clés du Script}\label{les-fonctions-cluxe9s-du-script}
+\addcontentsline{toc}{subsection}{Les Fonctions Clés du Script}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{N\_max} : Calcule la limite théorique de la précision. Si \(b \ge 0.25\), \(N=1\) , (aucune communication possible).
+\item
+  \texttt{a{[}i{]}\ =\ i/N\_max\ +\ 2*b*i*(i-N\_max)} : Formule analytique qui définit les frontières de communication.
+\item
+  \texttt{plt.axvspan} : Visualise les ``zones de langage''. Chaque couleur représente un message différent (ex: ``Vendre'', ``Neutre'', ``Acheter'').
+\end{itemize}
+
+\subsection*{Interprétation de l'Équilibre Parfait Bayésien}\label{interpruxe9tation-de-luxe9quilibre-parfait-bayuxe9sien}
+\addcontentsline{toc}{subsection}{Interprétation de l'Équilibre Parfait Bayésien}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{L'escalier rouge :} Représente la réaction de l'investisseur. Plus les marches sont larges, plus l'information est ``floue''.
+\item
+  \textbf{Le biais et la perte d'info :} Si \textbf{Biais = 0.01} : La communication est quasi-parfaite (beaucoup de marches).
+\item
+  Si \textbf{Biais = 0.25} : C'est l'\textbf{Équilibre de Babillage (Babbling)}. L'expert ne peut plus être cru, l'investisseur ignore le message et choisit toujours 0.5 (le milieu du graphique).
+\end{itemize}
+
+Voici un aperçu des résultats du code :
+
+\begin{verbatim}
+ Résultats pour biais = 0.25
+\end{verbatim}
+
+\begin{verbatim}
+--- ANALYSE DE L'ÉQUILIBRE ---
+Nombre de messages distincts possibles : 2
+ÉTAT : Communication Partielle. L'investisseur connaît la zone, mais pas le prix exact.
+\end{verbatim}
+
+\includegraphics{_main_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+L'exploration interactive est disponible dans le notebook :
+\href{https://colab.research.google.com/drive/1jELjoJmYpHdWqcoe-Yr6wzzNHnt5a2hK?usp=sharing}{Notebook interactif}
+
+\chapter*{VI. Limites et nuances du cheap talk}\label{vi.-limites-et-nuances-du-cheap-talk}
+\addcontentsline{toc}{chapter}{VI. Limites et nuances du cheap talk}
+
+Le modèle de cheap talk, malgré sa puissance analytique, présente plusieurs limites importantes qui doivent être reconnues pour une compréhension nuancée. Premièrement, le modèle suppose que les joueurs sont parfaitement rationnels et que la structure du jeu est connaissance commune. En réalité, les individus peuvent avoir des capacités cognitives limitées, des biais comportementaux, ou des croyances erronées sur la structure du jeu.
+
+Deuxièmement, le modèle ignore les aspects répétés de la communication. Dans des interactions répétées, la réputation peut émerger comme mécanisme de crédibilité : un émetteur qui ment systématiquement perd sa crédibilité future, ce qui peut discipliner son comportement même en l'absence de coûts directs. Cette dimension répétée enrichit considérablement les possibilités de communication crédible.
+Troisièmement, le modèle suppose que les messages sont totalement non vérifiables. En pratique, même si la vérification complète est impossible, il peut exister une probabilité de vérification ex post, ou des mécanismes de réputation informels qui créent des coûts indirects au mensonge. Ces mécanismes peuvent améliorer la crédibilité de la communication au-delà de ce que prédit le modèle de base.
+
+Enfin, le modèle suppose que les préférences sont fixes et connues. En réalité, les préférences peuvent être endogènes, évoluer dans le temps, ou être partiellement privées, ce qui complique l'analyse mais peut aussi créer de nouvelles possibilités pour la communication crédible.
+
+\chapter*{Conclusion}\label{conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+\textbf{Conclusion}
+
+Le cheap talk représente un cadre théorique fondamental pour comprendre comment l'information peut être transmise même en l'absence de mécanismes de vérification ou de contraintes légales. Le modèle de Crawford et Sobel démontre que lorsque les intérêts sont partiellement alignés, une communication limitée mais informative peut émerger en équilibre, avec la précision de la communication décroissant avec l'ampleur du conflit d'intérêts. Cette théorie éclaire de nombreux phénomènes économiques et sociaux, des interactions entre experts et décideurs aux communications stratégiques dans les organisations.
+
+Les résultats principaux peuvent être résumés en trois points. Premièrement, le cheap talk n'est pas toujours totalement inefficace : même sans coûts ou vérification, une communication informative peut exister lorsque les intérêts sont suffisamment alignés. Deuxièmement, la précision de la communication est limitée par le degré de conflit d'intérêts : plus le biais est important, moins la communication peut être précise. Troisièmement, l'équilibre de babillage existe toujours, mais des équilibres plus informatifs peuvent coexister lorsque le biais est suffisamment faible.
+
+Ces insights ont des implications importantes pour la conception de mécanismes institutionnels. Comprendre les limites de la communication non contraignante aide à identifier quand des mécanismes de vérification, de réputation, ou de régulation sont nécessaires pour améliorer l'efficacité de la transmission d'information. La théorie du cheap talk reste un outil essentiel pour analyser les problèmes de communication stratégique dans des contextes économiques et sociaux variés.
+
+\end{document}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Structure et équilibre du modèle | Cheap talk</title>
+  <meta name="description" content="1 Structure et équilibre du modèle | Cheap talk" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Structure et équilibre du modèle | Cheap talk" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Structure et équilibre du modèle | Cheap talk" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="iii.-modèle-de-crawford-sobel.html"/>
+<link rel="next" href="blocks.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link rel="shortcut icon" href="images/bookdown.ico" type="image/x-icon">
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="text-align:center;">
+  <img src="images/prevision.png" style="max-width:200px; width:100%; height:auto; display:inline-block; margin-bottom:0.35em;">
+</li>
+<li><a href="index.html">Prévision des coûts médicaux</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="i.-généralités.html"><a href="i.-généralités.html"><i class="fa fa-check"></i>I. Généralités</a></li>
+<li class="chapter" data-level="" data-path="ii.-fondements-théoriques.html"><a href="ii.-fondements-théoriques.html"><i class="fa fa-check"></i>II. Fondements théoriques</a>
+<ul>
+<li class="chapter" data-level="" data-path="ii.-fondements-théoriques.html"><a href="ii.-fondements-théoriques.html#le-modèle-de-base-du-cheap-talk"><i class="fa fa-check"></i>1. Le modèle de base du Cheap Talk</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="iii.-modèle-de-crawford-sobel.html"><a href="iii.-modèle-de-crawford-sobel.html"><i class="fa fa-check"></i>III. Modèle de Crawford &amp; Sobel</a></li>
+<li class="chapter" data-level="1" data-path="structure-et-équilibre-du-modèle.html"><a href="structure-et-équilibre-du-modèle.html"><i class="fa fa-check"></i><b>1</b> Structure et équilibre du modèle</a></li>
+<li class="chapter" data-level="2" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>2</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>2.1</b> Equations</a></li>
+<li class="chapter" data-level="2.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>2.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="2.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>2.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>3</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>3.1</b> Publishing</a></li>
+<li class="chapter" data-level="3.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>3.2</b> 404 pages</a></li>
+<li class="chapter" data-level="3.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>3.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="i.-généralités-1.html"><a href="i.-généralités-1.html"><i class="fa fa-check"></i>I. Généralités</a></li>
+<li class="chapter" data-level="" data-path="i.-généralités-2.html"><a href="i.-généralités-2.html"><i class="fa fa-check"></i>I. Généralités</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publié avec bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Cheap talk</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="structure-et-équilibre-du-modèle" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Structure et équilibre du modèle<a href="structure-et-équilibre-du-modèle.html#structure-et-équilibre-du-modèle" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Le modèle de Crawford et Sobel est un jeu dynamique à information incomplète, dans lequel la communication intervient avant la prise de décision finale. Il est formalisé à partir de quatre éléments principaux : les joueurs, l’information, les stratégies et les fonctions d’utilité.</p>
+<ul>
+<li><strong>Acteurs et information</strong></li>
+</ul>
+<p>Le jeu met en interaction deux joueurs :
+- un <strong>émetteur informé</strong> (<em>sender</em>), noté <span class="math inline">\(S\)</span>,
+- un <strong>récepteur non informé</strong> (<em>receiver</em>), noté <span class="math inline">\(R\)</span>.</p>
+<p>Un état du monde <span class="math inline">\(\theta\)</span>, représentant l’information pertinente pour la décision finale, est tiré par la nature selon une distribution de probabilité commune et connue des deux joueurs. Cet état appartient généralement à un intervalle continu, par exemple <span class="math inline">\(\theta \in [0,1]\)</span>. L’émetteur observe parfaitement la réalisation de <span class="math inline">\(\theta\)</span>, tandis que le récepteur n’en a aucune connaissance directe.</p>
+<ul>
+<li><strong>Messages et actions</strong></li>
+</ul>
+<p>Après avoir observé <span class="math inline">\(\theta\)</span>, l’émetteur envoie un message <span class="math inline">\(m\)</span> au récepteur. L’ensemble des messages possibles est supposé suffisamment riche et ne fait l’objet d’aucune restriction particulière. Le message est purement verbal : il est gratuit, non vérifiable et n’engage pas l’émetteur.</p>
+<p>Après avoir reçu le message <span class="math inline">\(m\)</span>, le récepteur choisit une action <span class="math inline">\(a\)</span> dans un ensemble d’actions continues. Cette action détermine les gains des deux joueurs.</p>
+<p>La stratégie de l’émetteur est donc une fonction qui associe à chaque état du monde un message :
+<span class="math display">\[
+m(\theta)
+\]</span></p>
+<p>La stratégie du récepteur est une fonction qui associe à chaque message une action :
+<span class="math display">\[
+a(m)
+\]</span></p>
+<ul>
+<li><strong>Fonctions d’utilité et biais de l’émetteur</strong></li>
+</ul>
+<p>Les préférences des deux joueurs sont représentées par des fonctions d’utilité quadratiques. Le récepteur souhaite choisir une action aussi proche que possible de l’état réel du monde, tandis que l’émetteur préfère une action biaisée par rapport à cet état.</p>
+<p>La fonction d’utilité du récepteur est donnée par :
+<span class="math display">\[
+U_R = - (a - \theta)^2
+\]</span></p>
+<p>Le récepteur maximise donc son utilité en choisissant une action égale à l’espérance conditionnelle de <span class="math inline">\(\theta\)</span>, compte tenu du message reçu.</p>
+<p>La fonction d’utilité de l’émetteur est donnée par :
+<span class="math display">\[
+U_S = - (a - (\theta + b))^2
+\]</span></p>
+<p>Le paramètre <span class="math inline">\(b\)</span> représente le <strong>biais</strong> de l’émetteur. Il mesure le conflit d’intérêts entre les deux agents. Lorsque <span class="math inline">\(b = 0\)</span>, les préférences sont parfaitement alignées et l’émetteur souhaite que l’action choisie corresponde exactement à l’état du monde. Lorsque <span class="math inline">\(b \neq 0\)</span>, l’émetteur cherche à influencer la décision du récepteur dans une direction qui lui est favorable.</p>
+<ul>
+<li><strong>Déroulement du jeu</strong></li>
+</ul>
+<p>Le jeu se déroule selon la séquence suivante :
+1. La nature tire un état du monde <span class="math inline">\(\theta\)</span>.
+2. L’émetteur observe <span class="math inline">\(\theta\)</span>.
+3. L’émetteur envoie un message <span class="math inline">\(m\)</span>.
+4. Le récepteur observe <span class="math inline">\(m\)</span> et met à jour ses croyances sur <span class="math inline">\(\theta\)</span>.
+5. Le récepteur choisit une action <span class="math inline">\(a\)</span>.</p>
+<p>Il s’agit donc d’un jeu séquentiel avec information asymétrique.</p>
+<ul>
+<li><strong>Notion d’équilibre</strong></li>
+</ul>
+<p>L’équilibre pertinent dans ce cadre est un <strong>équilibre bayésien parfait</strong>. Un tel équilibre est défini par :
+- une stratégie de message de l’émetteur <span class="math inline">\(m(\theta)\)</span>,
+- une stratégie d’action du récepteur <span class="math inline">\(a(m)\)</span>,
+- des croyances du récepteur cohérentes avec la stratégie de l’émetteur.</p>
+<p>À l’équilibre, le récepteur choisit une action qui maximise son utilité compte tenu de ses croyances, et l’émetteur choisit son message de manière optimale en anticipant la réaction du récepteur.</p>
+<ul>
+<li><strong>Types d’équilibres</strong></li>
+</ul>
+<p>Le modèle admet toujours un <strong>équilibre de babillage</strong> (<em>babbling equilibrium</em>), dans lequel le message envoyé par l’émetteur ne transmet aucune information. Dans ce cas, le récepteur ignore le message et choisit une action constante correspondant à l’espérance non conditionnelle de <span class="math inline">\(\theta\)</span>.</p>
+<p>Cependant, Crawford et Sobel montrent également l’existence d’<strong>équilibres partiellement informatifs</strong>. Dans ces équilibres, l’émetteur ne révèle pas exactement l’état du monde, mais regroupe les valeurs possibles de <span class="math inline">\(\theta\)</span> en intervalles. À chaque intervalle correspond un message distinct. Le récepteur sait alors dans quel intervalle se situe <span class="math inline">\(\theta\)</span>, sans en connaître la valeur exacte, et choisit son action comme l’espérance conditionnelle de <span class="math inline">\(\theta\)</span> sur cet intervalle.</p>
+<p>La précision de l’information transmise dépend directement de l’importance du biais <span class="math inline">\(b\)</span>. Plus le biais est élevé, plus les intervalles sont larges et moins l’information transmise est précise. Lorsque le biais est trop important, seuls les équilibres non informatifs subsistent.</p>
+
+</div>
+<div class="full-width-wrapper">
+<footer style="margin-top: 5em; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+
+<!-- Ligne décorative -->
+<div style="height: 4px; background: linear-gradient(90deg, #fdba74 0%, #f97316 50%, #fdba74 100%);"></div>
+
+<div style="background: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%); 
+            color: #7c2d12; 
+            padding: 45px 0 25px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);">
+
+<div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+
+<!-- Bloc gauche -->
+<div style="flex: 1; min-width: 300px;">
+<div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+
+<div style="width: 42px; height: 42px; border-radius: 14px;
+            background: rgba(249,115,22,0.15);
+            border: 1px solid rgba(249,115,22,0.35);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 20px rgba(249,115,22,0.25);">
+🔥
+</div>
+
+<div>
+<h4 style="margin: 0; font-size: 1.15em; font-weight: 800; color: #7c2d12;">
+Cheap Talk
+</h4>
+<p style="margin: 0; font-size: 0.85em; color: #f97316; font-weight: 700;">
+Théorie des jeux — Projet académique
+</p>
+</div>
+</div>
+
+<!-- Citation -->
+<div style="padding-left: 14px; border-left: 3px solid #f97316;
+            font-style: italic; font-size: 0.85em; 
+            color: #92400e;">
+« Les paroles coûtent peu, mais elles peuvent tout changer. »
+<br>
+<span style="font-weight: 700; color: #7c2d12;">— Théorie des jeux</span>
+</div>
+
+</div>
+</div>
+
+<!-- Bas du footer -->
+<div style="max-width: 1100px; margin: 30px auto 0 auto;
+            padding: 20px 20px 0 20px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            text-align: center;
+            font-size: 0.7em;
+            color: #9a3412;
+            letter-spacing: 1px;">
+Promotion ISE2 2025–2026  
+<br>© ENSAE Dakar  
+<br><span style="font-weight:600;">Réalisé avec R Bookdown</span>
+</div>
+
+</div>
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="iii.-modèle-de-crawford-sobel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="blocks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-modele.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

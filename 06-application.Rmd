@@ -4,7 +4,10 @@
 
 Cette simulation illustre comment un conflit d'intérêts (le biais) influence la transmission d'information entre un **Expert** et un **Décideur**.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d36ed80a82625505a7b6912df6fb3bf6135f9418
 ### Les Joueurs et leurs Objectifs{-}
 
 * **L'Émetteur (L'Analyste financier) :** Il connaît la valeur réelle de l'action . Son utilité est  $U_E = -(a - (\theta + b))^2$ . Il veut que l'action  soit proche de la réalité augmentée de son biais.
@@ -32,6 +35,11 @@ Le script calcule l'**Équilibre Bayésien Parfait** du jeu en fonction du param
 * Si **Biais = 0.25** : C'est l'**Équilibre de Babillage (Babbling)**. L'expert ne peut plus être cru, l'investisseur ignore le message et choisit toujours 0.5 (le milieu du graphique).
 
 
+<<<<<<< HEAD
 L’exploration interactive est disponible dans en cliquant sur ce lien :
 [Exploration interactive](https://chroma-vine-47131463.figma.site/)
+=======
+L’exploration interactive est disponible en cliquant sur ce lien :
+[Visualisation interractive](https://chroma-vine-47131463.figma.site/)
+>>>>>>> d36ed80a82625505a7b6912df6fb3bf6135f9418
 

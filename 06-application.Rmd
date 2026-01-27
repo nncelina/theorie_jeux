@@ -1,0 +1,45 @@
+# V. Applications{-}
+
+### Simulation du Modèle de Cheap Talk{-}
+
+Cette simulation illustre comment un conflit d'intérêts (le biais) influence la transmission d'information entre un **Expert** et un **Décideur**.
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> d36ed80a82625505a7b6912df6fb3bf6135f9418
+### Les Joueurs et leurs Objectifs{-}
+
+* **L'Émetteur (L'Analyste financier) :** Il connaît la valeur réelle de l'action . Son utilité est  $U_E = -(a - (\theta + b))^2$ . Il veut que l'action  soit proche de la réalité augmentée de son biais.
+* **Le Récepteur (L'Investisseur) :** Il ne connaît pas . Son utilité est $U_R = -(a - \theta)^2$ . Il veut que son action  soit la plus proche possible de la valeur réelle.
+
+### Ce que fait le code{-}
+
+Le script calcule l'**Équilibre Bayésien Parfait** du jeu en fonction du paramètre de biais que vous choisissez via le curseur :
+
+1. **Calcul du nombre de partitions ($N$) :** Il détermine combien de "messages" différents l'expert peut envoyer de manière crédible. Plus le biais est élevé, plus  est petit.
+2. **Détermination des seuils ($a_i$) :** Le code résout l'équation d'indifférence de l'expert. Pour que l'équilibre tienne, l'expert doit être indifférent entre deux messages à la frontière de deux intervalles.
+3. **Calcul des actions ($a$) :** Pour chaque intervalle, l'investisseur choisit l'action optimale (la moyenne de l'intervalle).
+
+
+### Les Fonctions Clés du Script{-}
+
+* `N_max` : Calcule la limite théorique de la précision. Si $b \ge 0.25$, $N=1$ ,  (aucune communication possible).
+* `a[i] = i/N_max + 2*b*i*(i-N_max)` : Formule analytique qui définit les frontières de communication.
+* `plt.axvspan` : Visualise les "zones de langage". Chaque couleur représente un message différent (ex: "Vendre", "Neutre", "Acheter").
+
+### Interprétation de l'Équilibre Parfait Bayésien{-}
+
+* **L'escalier rouge :** Représente la réaction de l'investisseur. Plus les marches sont larges, plus l'information est "floue".
+* **Le biais et la perte d'info :** Si **Biais = 0.01** : La communication est quasi-parfaite (beaucoup de marches).
+* Si **Biais = 0.25** : C'est l'**Équilibre de Babillage (Babbling)**. L'expert ne peut plus être cru, l'investisseur ignore le message et choisit toujours 0.5 (le milieu du graphique).
+
+
+<<<<<<< HEAD
+L’exploration interactive est disponible dans en cliquant sur ce lien :
+[Exploration interactive](https://chroma-vine-47131463.figma.site/)
+=======
+L’exploration interactive est disponible en cliquant sur ce lien :
+[Visualisation interractive](https://chroma-vine-47131463.figma.site/)
+>>>>>>> d36ed80a82625505a7b6912df6fb3bf6135f9418
+

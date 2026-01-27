@@ -4,20 +4,6 @@
 
 Cette simulation illustre comment un conflit d'intérêts (le biais) influence la transmission d'information entre un **Expert** et un **Décideur**.
 
-```{r include=FALSE}
-library(reticulate)
-Sys.setenv(RETICULATE_CONDA = "C:/Users/DELL/anaconda3/condabin/conda.bat")
-conda_list()
-use_condaenv("r-reticulate", required = TRUE)
-```
-
-
-```{python include=FALSE}
-import numpy as np
-import matplotlib.pyplot as plt
-from ipywidgets import interact, FloatSlider
-```
-
 
 ### Les Joueurs et leurs Objectifs{-}
 
@@ -45,76 +31,7 @@ Le script calcule l'**Équilibre Bayésien Parfait** du jeu en fonction du param
 * **Le biais et la perte d'info :** Si **Biais = 0.01** : La communication est quasi-parfaite (beaucoup de marches).
 * Si **Biais = 0.25** : C'est l'**Équilibre de Babillage (Babbling)**. L'expert ne peut plus être cru, l'investisseur ignore le message et choisit toujours 0.5 (le milieu du graphique).
 
-Voici un aperçu des résultats du code :
 
-```{python echo=FALSE, message=FALSE, warning=FALSE}
-
-def simulate_cheap_talk(biais):
-    # 1. Calculer le nombre maximum d'intervalles (N) possibles pour ce biais
-    # La formule théorique est : N*(N-1)*2*b < 1
-    N_max = int(0.5 + 0.5 * np.sqrt(1 + 2/biais)) if biais > 0 else 10
-    if N_max < 1: N_max = 1
-
-    # 2. Détermination des frontières d'intervalles (a_i)
-    # Ces frontières respectent la condition d'équilibre de Nash
-    a = np.zeros(N_max + 1)
-    for i in range(1, N_max + 1):
-        # Formule de Crawford-Sobel pour la répartition des paliers
-        a[i] = i/N_max + 2 * biais * i * (i - N_max)
-
-    a[0], a[-1] = 0, 1  # S'assurer que ça commence à 0 et finit à 1
-    a = np.sort(a) # Tri pour éviter les erreurs de calcul flottant
-
-    # 3. Calcul des actions de l'investisseur (le milieu de chaque intervalle)
-    actions = [(a[i] + a[i+1])/2 for i in range(len(a)-1)]
-
-    # --- VISUALISATION ---
-    plt.figure(figsize=(12, 6))
-
-    # Zone de l'Expert (Emetteur)
-    plt.subplot(1, 2, 1)
-    for i in range(len(a)-1):
-        plt.axvspan(a[i], a[i+1], alpha=0.2, label=f"Msg {i+1}")
-        plt.text((a[i]+a[i+1])/2, 0.5, f"Intervalle {i+1}", rotation=90, ha='center')
-
-    plt.title(f"Partitions de l'Information (Biais b = {biais})")
-    plt.xlabel("Valeur réelle de l'action (Theta)")
-    plt.yticks([])
-    plt.xlim(0, 1)
-
-    # Graphique de Réaction : Réalité vs Action
-    plt.subplot(1, 2, 2)
-    for i in range(len(a)-1):
-        plt.hlines(actions[i], a[i], a[i+1], colors='r', lw=3, label="Action de l'investisseur" if i==0 else "")
-
-    plt.plot([0, 1], [0, 1], '--k', alpha=0.3, label="Vérité parfaite (b=0)")
-    plt.title("Réaction de l'Investisseur")
-    plt.xlabel("Valeur réelle (Theta)")
-    plt.ylabel("Action choisie (a)")
-    plt.legend()
-    plt.grid(True, alpha=0.3)
-    plt.xlim(0, 1)
-    plt.ylim(0, 1)
-
-    plt.tight_layout()
-    plt.show()
-
-    print(f"--- ANALYSE DE L'ÉQUILIBRE ---")
-    print(f"Nombre de messages distincts possibles : {N_max}")
-    if N_max == 1:
-        print("ÉTAT : Babillage (Babbling). Le biais est trop fort, aucune information ne passe.")
-    else:
-        print(f"ÉTAT : Communication Partielle. L'investisseur connaît la zone, mais pas le prix exact.")
-
-```
-
-
-```{python echo=FALSE, message=FALSE, warning=FALSE, comment=""}
-  # Création du slider interactif pour Colab
-print(" Résultats pour biais = 0.25")
-simulate_cheap_talk(0.25)
-```
-
-L’exploration interactive est disponible dans le notebook :
-[Notebook interactif](https://colab.research.google.com/drive/1jELjoJmYpHdWqcoe-Yr6wzzNHnt5a2hK?usp=sharing)
+L’exploration interactive est disponible dans en cliquant sur ce lien :
+[Exploration interactive](https://chroma-vine-47131463.figma.site/)
 

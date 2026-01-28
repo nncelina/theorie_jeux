@@ -13,4 +13,5 @@ rmd_files:
   - 06-application.Rmd
   - 07-limites.Rmd
   - 08-conclusion.Rmd
+  - 09-references.Rmd
 

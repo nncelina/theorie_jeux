@@ -20,8 +20,6 @@ output:
     background-color: #f8fafc !important; /* Gris très clair "Premium" */
 }
 
-/* On cache le titre automatique généré par Bookdown */
-h1 { display: none; } 
 
 /* 2. LOGOS */
 .header-logos {
@@ -65,7 +63,6 @@ h1 { display: none; }
     margin-bottom: 10px;
     border: 1px solid #fdba74;
 }
-
 
 .main-title {
     display: block !important;

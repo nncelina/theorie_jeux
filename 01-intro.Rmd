@@ -1,7 +1,5 @@
 # Introduction {-}
 
-**Introduction**
-
 Dans de nombreuses situations économiques, la transmission de l’information ne repose pas sur des actions coûteuses ou sur des mécanismes contractuels formels, mais sur de simples messages verbaux. Les agents annoncent des intentions, donnent des conseils ou formulent des recommandations sans que ces paroles n’aient d’effet direct sur leurs gains ni qu’elles soient juridiquement contraignantes. Pourtant, ces messages influencent souvent les décisions des autres agents. Cette observation soulève une question centrale en théorie des jeux et en économie de l’information : **peut-on transmettre de l’information de manière crédible uniquement à travers des messages gratuits ?**
 
 L’étude du **cheap talk** vise précisément à répondre à cette question. Elle permet de comprendre dans quelles conditions une communication non coûteuse peut être informative, et dans quelles situations elle devient totalement inefficace. Le cheap talk est ainsi particulièrement pertinent pour analyser des phénomènes tels que la communication politique, les annonces d’entreprises, les recommandations d’experts ou encore les interactions entre conseillers et décideurs. Dans tous ces cas, les paroles échangées ne sont ni vérifiables ni contraignantes, mais elles jouent un rôle déterminant dans la prise de décision.
